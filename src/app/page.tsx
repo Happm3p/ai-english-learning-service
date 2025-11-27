@@ -9,8 +9,6 @@ import {
   Container,
   Box,
   Grid,
-  Card,
-  CardContent,
   Stack,
   Paper,
   Fade,
@@ -62,7 +60,7 @@ export default function LandingPage() {
                 <Box component="span" sx={{ color: 'secondary.main' }}>自由になる。</Box>
               </Typography>
               <Typography variant="h5" color="text.secondary" paragraph sx={{ mb: 6, fontWeight: 400, lineHeight: 1.8, maxWidth: '600px', mx: 'auto' }}>
-                Claude Haiku 4.5搭載。<br sx={{ display: { md: 'none' } }} />
+                Claude Haiku 4.5搭載。<Box component="br" sx={{ display: { md: 'none' } }} />
                 あなたの英文を瞬時に添削し、<br />
                 ネイティブのような表現力を手に入れましょう。
               </Typography>
@@ -108,7 +106,7 @@ export default function LandingPage() {
                 description: '学習履歴を自動保存。過去のミスを振り返り、確実なスキルアップをサポート。',
               },
             ].map((feature, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
                 <Box sx={{ p: 2 }}>
                   <Box sx={{ mb: 3, p: 2, bgcolor: 'rgba(9, 132, 227, 0.1)', borderRadius: '50%', width: 'fit-content' }}>
                     {feature.icon}
@@ -143,7 +141,7 @@ export default function LandingPage() {
               { step: '02', title: 'AIが添削', desc: 'Claude Haiku 4.5が瞬時に修正案と解説を生成します。' },
               { step: '03', title: '学習・復習', desc: '解説を読み、履歴として保存して後で復習します。' },
             ].map((item, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
                 <Paper
                   elevation={0}
                   sx={{
